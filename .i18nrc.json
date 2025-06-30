@@ -1,0 +1,19 @@
+{
+  "localesPaths": ["src/i18n/messages"],
+  "keystyle": "nested",
+  "pathMatcher": "{locale}.json",
+  "enabledFrameworks": ["react", "next-intl"],
+  "sourceLanguage": "zh-CN",
+  "displayLanguage": "zh-CN",
+  "enabledParsers": ["json"],
+  "namespace": false,
+  "dirStructure": "file",
+  "sortKeys": false,
+  "keepFulfilled": true,
+  "refactor": {
+    "enabled": true
+  },
+  "usage": {
+    "scanningIgnore": []
+  }
+} 
