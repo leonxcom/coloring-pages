@@ -23,43 +23,43 @@ function HeroSection() {
           {/* 左侧文本内容 */}
           <div className="space-y-6 text-center lg:text-left">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-100 leading-tight whitespace-nowrap">
-              {t('hero.title')}
-            </h1>
-            
+          {t('hero.title')}
+        </h1>
+        
             <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              {t('hero.description1')}
-            </div>
-            
+          {t('hero.description1')}
+        </div>
+        
             <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              {t('hero.description2')}
-            </div>
-            
+          {t('hero.description2')}
+        </div>
+        
             <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              {(() => {
-                const text = t('hero.description3');
-                const procreateIndex = text.indexOf('Procreate');
-                if (procreateIndex === -1) {
-                  return text;
-                }
-                
-                const beforeProcreate = text.substring(0, procreateIndex);
-                const afterProcreate = text.substring(procreateIndex + 'Procreate'.length);
-                
-                return (
-                  <>
-                    {beforeProcreate}
-                    <a 
-                      href={t('hero.procreateLink')}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-cyan-500 hover:text-cyan-600 underline font-semibold transition-colors"
-                    >
-                      Procreate
-                    </a>
-                    {afterProcreate}
-                  </>
-                );
-              })()}
+          {(() => {
+            const text = t('hero.description3');
+            const procreateIndex = text.indexOf('Procreate');
+            if (procreateIndex === -1) {
+              return text;
+            }
+            
+            const beforeProcreate = text.substring(0, procreateIndex);
+            const afterProcreate = text.substring(procreateIndex + 'Procreate'.length);
+            
+            return (
+              <>
+                {beforeProcreate}
+                <a 
+                  href={t('hero.procreateLink')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-500 hover:text-cyan-600 underline font-semibold transition-colors"
+                >
+                  Procreate
+                </a>
+                {afterProcreate}
+              </>
+            );
+          })()}
             </div>
           </div>
 

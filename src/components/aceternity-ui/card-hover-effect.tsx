@@ -40,51 +40,51 @@ export const HoverEffect = ({
 
   return (
     <>
-      <div
-        className={cn(
-          "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6",
-          className
-        )}
-      >
-        {items.map((item, idx) => (
+    <div
+      className={cn(
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6",
+        className
+      )}
+    >
+      {items.map((item, idx) => (
           <div
-            key={item?.id}
+          key={item?.id}
             className="relative group block p-2 h-full w-full cursor-pointer"
-            onMouseEnter={() => setHoveredIndex(idx)}
-            onMouseLeave={() => setHoveredIndex(null)}
+          onMouseEnter={() => setHoveredIndex(idx)}
+          onMouseLeave={() => setHoveredIndex(null)}
             onClick={() => handleCardClick(item)}
-          >
-            <AnimatePresence>
-              {hoveredIndex === idx && (
-                <motion.span
-                  className="absolute inset-0 h-full w-full bg-purple-200 dark:bg-slate-800/[0.8] block rounded-3xl"
-                  layoutId="hoverBackground"
-                  initial={{ opacity: 0 }}
-                  animate={{
-                    opacity: 1,
-                    transition: { duration: 0.15 },
-                  }}
-                  exit={{
-                    opacity: 0,
-                    transition: { duration: 0.15, delay: 0.2 },
-                  }}
-                />
-              )}
-            </AnimatePresence>
-            <Card>
+        >
+          <AnimatePresence>
+            {hoveredIndex === idx && (
+              <motion.span
+                className="absolute inset-0 h-full w-full bg-purple-200 dark:bg-slate-800/[0.8] block rounded-3xl"
+                layoutId="hoverBackground"
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 0.15 },
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: { duration: 0.15, delay: 0.2 },
+                }}
+              />
+            )}
+          </AnimatePresence>
+          <Card>
               <div className="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
-                <Image
-                  src={item.imageSrc}
-                  alt={item.title}
-                  fill
-                  className="object-contain group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardTitle>{item.title}</CardTitle>
-            </Card>
+              <Image
+                src={item.imageSrc}
+                alt={item.title}
+                fill
+                className="object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <CardTitle>{item.title}</CardTitle>
+          </Card>
           </div>
-        ))}
-      </div>
+      ))}
+    </div>
       
       {/* 预览弹窗 */}
       {selectedItem && (
