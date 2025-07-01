@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-07-01T03:33:18.315Z",
+  "github": {
+    "username": "leonxcom",
+    "repo": "coloring-pages",
+    "branch": "main",
+    "imagesPath": "public/images"
+  },
+  "conversion": {
+    "totalMappings": 31,
+    "githubBaseURL": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images",
+    "status": "ready_for_deployment"
+  },
+  "nextSteps": [
+    "1. 检查生成的 *-github.html 文件",
+    "2. 测试GitHub链接是否可以访问",
+    "3. 使用 index-github.html 进行掘金部署",
+    "4. 验证所有图片正常显示"
+  ],
+  "files": {
+    "original": "dist/index.html",
+    "github": "dist/index-github.html",
+    "minimal": "dist/index-minimal-github.html"
+  }
+}
