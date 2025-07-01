@@ -1,0 +1,54 @@
+{
+  "timestamp": "2025-07-01T03:20:49.876Z",
+  "github": {
+    "username": "leonxcom",
+    "repo": "coloring-pages",
+    "branch": "main",
+    "imagesPath": "public/images"
+  },
+  "migration": {
+    "totalFound": 31,
+    "totalDownloaded": 30,
+    "successRate": 97
+  },
+  "mappings": {
+    "https://ext.same-assets.com/2742100107/2449589214.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2449589214.webp",
+    "https://ext.same-assets.com/2742100107/3661199039.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3661199039.webp",
+    "https://ext.same-assets.com/2742100107/3621435478.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3621435478.webp",
+    "https://ext.same-assets.com/2742100107/1220896302.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1220896302.webp",
+    "https://ext.same-assets.com/2742100107/596536247.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/596536247.webp",
+    "https://ext.same-assets.com/2742100107/3004900862.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3004900862.webp",
+    "https://ext.same-assets.com/2742100107/930033431.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/930033431.webp",
+    "https://ext.same-assets.com/2742100107/1094903095.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1094903095.webp",
+    "https://ext.same-assets.com/2742100107/1286000515.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1286000515.webp",
+    "https://ext.same-assets.com/2742100107/3407757796.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3407757796.webp",
+    "https://ext.same-assets.com/2742100107/4109091522.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/4109091522.webp",
+    "https://ext.same-assets.com/2742100107/2237175773.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2237175773.webp",
+    "https://ext.same-assets.com/2742100107/2216799269.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2216799269.webp",
+    "https://ext.same-assets.com/2742100107/1931439364.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1931439364.webp",
+    "https://ext.same-assets.com/2742100107/1224725554.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1224725554.webp",
+    "https://ext.same-assets.com/2742100107/2814148537.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2814148537.webp",
+    "https://ext.same-assets.com/2742100107/1404643698.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1404643698.webp",
+    "https://ext.same-assets.com/2742100107/3422297540.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3422297540.webp",
+    "https://ext.same-assets.com/2742100107/2720882725.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2720882725.webp",
+    "https://ext.same-assets.com/2742100107/4188607691.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/4188607691.webp",
+    "https://ext.same-assets.com/2742100107/2481990420.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2481990420.webp",
+    "https://ext.same-assets.com/2742100107/3996295941.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3996295941.webp",
+    "https://ext.same-assets.com/2742100107/1066963183.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1066963183.webp",
+    "https://ext.same-assets.com/2742100107/1588406660.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1588406660.webp",
+    "https://ext.same-assets.com/2742100107/1370122994.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1370122994.webp",
+    "https://ext.same-assets.com/2742100107/2800571658.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2800571658.webp",
+    "https://ext.same-assets.com/2742100107/1831182055.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1831182055.webp",
+    "https://ext.same-assets.com/2742100107/2771972323.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2771972323.webp",
+    "https://ext.same-assets.com/2742100107/1211563995.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1211563995.webp",
+    "https://ext.same-assets.com/2742100107/1679282424.webp": "https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1679282424.webp"
+  },
+  "nextSteps": [
+    "1. 检查 public/images/ 目录中的所有图片",
+    "2. 将 public/images/ 目录上传到你的GitHub仓库",
+    "3. 确保GitHub仓库是公开的",
+    "4. 修改脚本中的 GITHUB_CONFIG",
+    "5. 重新运行脚本生成正确的GitHub链接",
+    "6. 测试HTML文件中的图片链接"
+  ]
+}

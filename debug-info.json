@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-06-30T20:55:23.633Z",
+  "files": [
+    {
+      "name": "index-minimal.html",
+      "size": 65183,
+      "sizeKB": 64
+    },
+    {
+      "name": "index.html",
+      "size": 65289,
+      "sizeKB": 64
+    },
+    {
+      "name": "styles.css",
+      "size": 42288,
+      "sizeKB": 41
+    }
+  ],
+  "totalSize": 172760,
+  "externalLinks": {
+    "total": 34,
+    "domains": {
+      "coloringplanet.vercel.app": 3,
+      "colorpenguin.com": 1,
+      "ext.same-assets.com": 30
+    }
+  }
+}

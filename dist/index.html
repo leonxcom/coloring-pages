@@ -1,263 +1,164 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="__variable_5cfdac __variable_9a8899">
+<html lang="zh-CN" class="h-full">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="favicon.ico" sizes="any">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="preload" href="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/hero/ai-coloring-hero.png" as="image"/>
+  <link rel="stylesheet" href="styles.css"/>
   <title>涂色星球 - 最好玩的涂色平台</title>
-  <meta name="description" content="为所有儿童和成人发现免费涂色页面。无需注册！立即下载并为手绘插图着色。">
-  
+  <meta name="description" content="为所有儿童和成人发现免费涂色页面。无需注册！立即下载并为手绘插图着色。"/>
   <style>
-/* Core Variables */
-:root{--background:0 0% 100%;--foreground:240 10% 3.9%;--primary:339 82% 69%;--secondary:210 50% 55%;--border:240 5.9% 90%;--accent:337 74% 93%;--radius:0.5rem}
-.dark{--background:222.2 84% 4.9%;--foreground:210 40% 98%;--secondary:217.2 32.6% 17.5%;--border:217.2 32.6% 17.5%}
-
-/* Reset & Base */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{line-height:1.5;font-family:ui-sans-serif,system-ui,sans-serif}
-body{margin:0;line-height:inherit;background-color:hsl(var(--background));color:hsl(var(--foreground));transition:background-color .3s ease,color .3s ease}
-.hidden{display:none!important}
-
-/* Layout */
-.container{width:100%;margin-right:auto;margin-left:auto;padding-right:1rem;padding-left:1rem}
-@media(min-width:640px){.container{max-width:640px;padding-right:2rem;padding-left:2rem}}
-@media(min-width:768px){.container{max-width:768px}}
-@media(min-width:1024px){.container{max-width:1024px;padding-right:4rem;padding-left:4rem}}
-@media(min-width:1280px){.container{max-width:1280px;padding-right:5rem;padding-left:5rem}}
-
-/* Flexbox & Grid */
-.flex{display:flex}.flex-col{flex-direction:column}.flex-1{flex:1 1 0%}
-.items-center{align-items:center}.justify-between{justify-content:space-between}.justify-center{justify-content:center}
-.grid{display:grid}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
-@media(min-width:768px){.md\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\\:flex{display:flex}.md\\:hidden{display:none}}
-@media(min-width:1024px){.lg\\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\\:text-left{text-align:left}}
-@media(min-width:1280px){.xl\\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
-
-/* Spacing */
-.gap-6{gap:1.5rem}.gap-12{gap:3rem}
-.space-x-2>:not([hidden])~:not([hidden]){margin-left:0.5rem}
-.space-x-6>:not([hidden])~:not([hidden]){margin-left:1.5rem}
-.space-y-6>:not([hidden])~:not([hidden]){margin-top:1.5rem}
-.max-w-6xl{max-width:72rem}.max-w-2xl{max-width:42rem}.mx-auto{margin-left:auto;margin-right:auto}
-.mb-4{margin-bottom:1rem}.mb-12{margin-bottom:3rem}
-.px-4{padding-left:1rem;padding-right:1rem}.py-16{padding-top:4rem;padding-bottom:4rem}
-.pt-12{padding-top:3rem}.pb-20{padding-bottom:5rem}.py-12{padding-top:3rem;padding-bottom:3rem}
-.p-2{padding:0.5rem}.p-4{padding:1rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}
-.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}
-.px-6{padding-left:1.5rem;padding-right:1.5rem}
-
-/* Size & Position */
-.w-full{width:100%}.h-16{height:4rem}.h-9{height:2.25rem}.w-9{width:2.25rem}
-.h-4{height:1rem}.w-4{width:1rem}.h-5{height:1.25rem}.w-5{width:1.25rem}
-.min-h-full{min-height:100%}.sticky{position:sticky}.relative{position:relative}
-.absolute{position:absolute}.top-0{top:0}.z-50{z-index:50}.z-20{z-index:20}
-.left-0{left:0}.top-full{top:100%}.mt-1{margin-top:0.25rem}
-
-/* Typography */
-.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}
-.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}
-@media(min-width:768px){.md\\:text-4xl{font-size:2.25rem;line-height:2.5rem}}
-@media(min-width:1024px){.lg\\:text-5xl{font-size:3rem;line-height:1}}
-.font-bold{font-weight:700}.font-semibold{font-weight:600}.font-medium{font-weight:500}
-.text-center{text-align:center}.leading-tight{line-height:1.25}.leading-relaxed{line-height:1.625}
-.whitespace-nowrap{white-space:nowrap}.text-transparent{color:transparent}
-
-/* Colors */
-.text-gray-600{color:rgb(75 85 99)}.text-gray-700{color:rgb(55 65 81)}.text-gray-800{color:rgb(31 41 55)}
-.text-white{color:rgb(255 255 255)}.text-white\\/80{color:rgba(255,255,255,0.8)}
-.dark .dark\\:text-gray-100{color:rgb(243 244 246)}.dark .dark\\:text-gray-300{color:rgb(209 213 219)}
-
-/* Backgrounds */
-.bg-white{background-color:rgb(255 255 255)}.bg-gray-50{background-color:rgb(249 250 251)}
-.bg-gray-200{background-color:rgb(229 231 235)}.bg-secondary{background-color:hsl(var(--secondary))}
-.dark .dark\\:bg-gray-950{background-color:rgb(3 7 18)}.dark .dark\\:bg-gray-900{background-color:rgb(17 24 39)}
-.dark .dark\\:bg-gray-800{background-color:rgb(31 41 55)}.dark .dark\\:bg-gray-700{background-color:rgb(55 65 81)}
-
-/* Header specific - with fallback for transparency */
-.bg-white\\/95{background-color:rgba(255,255,255,0.95)}
-.dark .dark\\:bg-gray-950\\/95{background-color:rgba(3,7,18,0.95)}
-.backdrop-blur{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-
-/* Gradients */
-.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}
-.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}
-.bg-gradient-to-t{background-image:linear-gradient(to top,var(--tw-gradient-stops))}
-.from-pink-500{--tw-gradient-from:#ec4899;--tw-gradient-stops:var(--tw-gradient-from),transparent}
-.via-purple-500{--tw-gradient-stops:var(--tw-gradient-from),#a855f7,transparent}
-.to-cyan-400{--tw-gradient-stops:var(--tw-gradient-from),#22d3ee}
-.from-purple-600{--tw-gradient-from:#9333ea;--tw-gradient-stops:var(--tw-gradient-from),transparent}
-.to-pink-600{--tw-gradient-stops:var(--tw-gradient-from),#db2777}
-.from-white{--tw-gradient-from:white;--tw-gradient-stops:var(--tw-gradient-from),transparent}
-.to-gray-50{--tw-gradient-stops:var(--tw-gradient-from),rgb(249 250 251)}
-.from-black\\/10{--tw-gradient-from:rgba(0,0,0,0.1);--tw-gradient-stops:var(--tw-gradient-from),transparent}
-.to-transparent{--tw-gradient-stops:var(--tw-gradient-from),transparent}
-.dark .dark\\:from-gray-950{--tw-gradient-from:rgb(3 7 18);--tw-gradient-stops:var(--tw-gradient-from),transparent}
-.dark .dark\\:to-gray-900{--tw-gradient-stops:var(--tw-gradient-from),rgb(17 24 39)}
-.bg-clip-text{-webkit-background-clip:text;background-clip:text}
-
-/* Borders */
-.border{border-width:1px}.border-b{border-bottom-width:1px}
-.border-input{border-color:hsl(var(--input))}.border-transparent{border-color:transparent}
-.border-gray-200{border-color:rgb(229 231 235)}
-.dark .dark\\:border-gray-700{border-color:rgb(55 65 81)}.dark .dark\\:border-gray-800{border-color:rgb(31 41 55)}
-.rounded-md{border-radius:calc(var(--radius) - 2px)}.rounded-full{border-radius:9999px}
-.rounded-2xl{border-radius:1rem}.rounded-xl{border-radius:0.75rem}
-
-/* Shadows */
-.shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -4px rgba(0,0,0,0.1)}
-.shadow-xl{box-shadow:0 20px 25px -5px rgba(0,0,0,0.1),0 8px 10px -6px rgba(0,0,0,0.1)}
-.shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,0.25)}
-
-/* Transitions */
-.transition-colors{transition-property:color,background-color,border-color;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}
-.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}
-.duration-300{transition-duration:300ms}
-
-/* Hover Effects */
-.hover\\:text-primary:hover{color:hsl(var(--primary))}
-.hover\\:bg-accent:hover{background-color:hsl(var(--accent))}
-.hover\\:shadow-xl:hover{box-shadow:0 20px 25px -5px rgba(0,0,0,0.1),0 8px 10px -6px rgba(0,0,0,0.1)}
-.hover\\:scale-105:hover{transform:scale(1.05)}
-.hover\\:from-purple-700:hover{--tw-gradient-from:#7e22ce;--tw-gradient-stops:var(--tw-gradient-from),transparent}
-.hover\\:to-pink-700:hover{--tw-gradient-stops:var(--tw-gradient-from),#be185d}
-.hover\\:text-white:hover{color:rgb(255 255 255)}
-.hover\\:text-white\\/80:hover{color:rgba(255,255,255,0.8)}
-.hover\\:bg-gray-100:hover{background-color:rgb(243 244 246)}
-.dark .dark\\:hover\\:bg-gray-700:hover{background-color:rgb(55 65 81)}
-
-/* Group Hover */
-.group:hover .group-hover\\:scale-105{transform:scale(1.05)}
-.group:hover .group-hover\\:text-purple-600{color:rgb(147 51 234)}
-.group:hover .group-hover\\:border-purple-300{border-color:rgb(216 180 254)}
-.group:hover .group-hover\\:shadow-xl{box-shadow:0 20px 25px -5px rgba(0,0,0,0.1),0 8px 10px -6px rgba(0,0,0,0.1)}
-.dark .group:hover .dark\\:group-hover\\:text-purple-400{color:rgb(192 132 252)}
-.dark .group:hover .dark\\:group-hover\\:border-purple-500{border-color:rgb(168 85 247)}
-
-/* Special */
-.aspect-square{aspect-ratio:1/1}.object-cover{object-fit:cover}.object-contain{object-fit:contain}
-.overflow-hidden{overflow:hidden}.cursor-pointer{cursor:pointer}.inline-flex{display:inline-flex}
-.opacity-0{opacity:0}.opacity-100{opacity:1}.opacity-15{opacity:0.15}.opacity-20{opacity:0.2}
-.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}
-.transform{transform:translate(var(--tw-translate-x,0),var(--tw-translate-y,0)) rotate(var(--tw-rotate,0)) skewX(var(--tw-skew-x,0)) skewY(var(--tw-skew-y,0)) scaleX(var(--tw-scale-x,1)) scaleY(var(--tw-scale-y,1))}
-.translate-x-1{--tw-translate-x:0.25rem;transform:translate(var(--tw-translate-x,0),var(--tw-translate-y,0))}
-.translate-x-8{--tw-translate-x:2rem;transform:translate(var(--tw-translate-x,0),var(--tw-translate-y,0))}
-.blur-xl{filter:blur(24px)}.blur-2xl{filter:blur(40px)}.block{display:block}
-
-/* Width specific */
-.w-\\[140px\\]{width:140px}.mr-2{margin-right:0.5rem}
-
-/* Language Selector */
-.lang-selector:hover .lang-dropdown,.lang-selector:focus-within .lang-dropdown{
-  opacity:1!important;pointer-events:auto!important;
-}
-
-/* Antialiased */
-.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    .lang-selector:hover .lang-dropdown,
+    .lang-selector:focus-within .lang-dropdown {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
   </style>
 </head>
-<body class="antialiased flex flex-col min-h-full">
-  
+<body class="antialiased flex flex-col min-h-full bg-white dark:bg-gray-950">
   <script>
-    // Theme initialization
-    (function(){
-      const html = document.documentElement;
-      function setTheme(theme){
-        html.classList.remove('light','dark');
-        html.classList.add(theme);
-        html.style.colorScheme = theme;
-        localStorage.setItem('theme', theme);
+    // 主题系统初始化脚本
+    (function(e,t,r,n,i,o,a,s){
+      let l=document.documentElement,u=["light","dark"];
+      function c(t){
+        var r;
+        (Array.isArray(e)?e:[e]).forEach(e=>{
+          let r="class"===e,n=r&&o?i.map(e=>o[e]||e):i;
+          r?(l.classList.remove(...n),l.classList.add(o&&o[t]?o[t]:t)):l.setAttribute(e,t)
+        });
+        r=t;
+        s&&u.includes(r)&&(l.style.colorScheme=r)
       }
-      const saved = localStorage.getItem('theme');
-      if(saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)){
-        setTheme('dark');
-      } else {
-        setTheme('light');
-      }
-    })();
+      if(n)c(n);
+      else try{
+        let e=localStorage.getItem(t)||r,n=a&&"system"===e?window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light":e;
+        c(n)
+      }catch(e){}
+    })("class","theme","system",null,["light","dark"],null,true,true);
   </script>
-
-  <!-- Header -->
   <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur dark:bg-gray-950/95 dark:border-gray-800">
     <div class="container mx-auto px-4">
       <div class="flex h-16 items-center justify-between">
-        <a class="flex items-center space-x-2" href="./">
+        <div class="flex items-center space-x-2">
           <span class="text-2xl">🎨</span>
-          <span id="site-logo" class="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">涂色星球</span>
-        </a>
+          <span class="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+            <span data-i18n="site-logo">涂色星球</span>
+          </span>
+        </div>
 
         <nav class="hidden md:flex items-center space-x-6">
-          <a target="_blank" class="flex items-center space-x-1 text-sm font-bold text-gray-700 hover:text-primary transition-colors dark:text-gray-300" href="https://coloringplanet.vercel.app">
-            <span id="fullstack-link">全栈发布版本（Bug少）</span>
+          <a target="_blank" rel="noopener noreferrer" 
+             class="flex items-center space-x-1 text-sm font-bold text-gray-700 hover:text-purple-600 transition-colors dark:text-gray-300" 
+             href="https://coloringplanet.vercel.app">
+            <span data-i18n="fullstack-link">全栈发布版本（Bug少）</span>
             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
             </svg>
           </a>
           
-          <a target="_blank" class="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-primary transition-colors dark:text-gray-300" href="https://colorpenguin.com/">
-            <span id="ai-generator-link">AI生成涂色页</span>
+          <a target="_blank" rel="noopener noreferrer" 
+             class="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors dark:text-gray-300" 
+             href="https://colorpenguin.com/">
+            <span data-i18n="ai-generator-link">AI生成涂色页</span>
             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
             </svg>
           </a>
 
-          <button class="inline-flex items-center justify-center h-9 w-9 text-gray-700 hover:text-primary dark:text-gray-300">
+          <button class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-accent h-9 w-9 text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-600">
             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
             </svg>
           </button>
 
-          <button id="theme-toggle" class="relative inline-flex h-9 w-16 items-center rounded-full transition-all duration-300 bg-gray-200 dark:bg-gray-700">
-            <div id="theme-slider" class="h-7 w-7 rounded-full bg-white shadow-lg transition-transform duration-300 translate-x-1"></div>
+          <button
+            class="relative inline-flex h-9 w-16 items-center rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+            id="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <!-- 背景光晕效果 -->
+            <div id="glow-effect" class="absolute inset-0 rounded-full blur-xl opacity-70 transition-all duration-300"></div>
+            
+            <!-- 滑动按钮 -->
+            <div class="relative h-7 w-7 rounded-full bg-white shadow-lg transition-all duration-300 translate-x-1 flex items-center justify-center" id="theme-toggle-switch">
+              <!-- 图标容器 -->
+              <div class="relative w-4 h-4">
+                <!-- 太阳图标 (Lucide Sun) -->
+                <svg id="sun-icon" class="absolute inset-0 w-4 h-4 text-orange-500 transition-all duration-300 scale-100 opacity-100 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <!-- 月亮图标 (Lucide Moon) -->
+                <svg id="moon-icon" class="absolute inset-0 w-4 h-4 text-indigo-600 transition-all duration-300 scale-0 opacity-0 -rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- 星星装饰效果（仅暗主题显示） -->
+            <div id="star-1" class="absolute top-1 left-2 w-1 h-1 bg-white rounded-full" style="display: none;"></div>
+            <div id="star-2" class="absolute bottom-1 left-3 w-0.5 h-0.5 bg-white rounded-full delay-75" style="display: none;"></div>
+            <div id="star-3" class="absolute top-2 left-5 w-0.5 h-0.5 bg-white rounded-full delay-150" style="display: none;"></div>
           </button>
 
           <div class="lang-selector group">
             <div class="relative">
-              <div class="flex h-9 items-center justify-between rounded-md border px-3 py-2 text-sm w-[140px]">
+              <div class="flex h-9 items-center justify-between whitespace-nowrap rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm shadow-sm w-[140px] cursor-pointer">
                 <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/>
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                  <path d="M2 12h20"></path>
                 </svg>
-                <span id="current-lang">简体中文</span>
+                <span data-i18n="current-lang" class="text-sm">中文（简体）</span>
                 <svg class="h-4 w-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </div>
-              <div class="lang-dropdown absolute top-full left-0 mt-1 w-full bg-white dark:bg-gray-800 border rounded-md shadow-lg z-50 opacity-0 transition-all group-hover:opacity-100" style="pointer-events:none">
-                <div class="py-1" style="pointer-events:auto">
-                  <button class="lang-option block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700" data-lang="zh-CN">简体中文</button>
-                  <button class="lang-option block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700" data-lang="en">English</button>
-                  <button class="lang-option block w-full text-left px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700" data-lang="zh-TW">繁體中文</button>
+              <div class="lang-dropdown absolute top-full left-0 mt-1 w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg z-50 opacity-0 transition-opacity group-hover:opacity-100" style="pointer-events: none;">
+                <div class="py-1" style="pointer-events: auto;">
+                  <button class="lang-option block w-full text-left px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 justify-start" data-lang="zh-CN" style="text-align: left !important;">中文（简体）</button>
+                  <button class="lang-option block w-full text-left px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 justify-start" data-lang="en" style="text-align: left !important;">English</button>
+                  <button class="lang-option block w-full text-left px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 justify-start" data-lang="zh-TW" style="text-align: left !important;">中文（繁體）</button>
                 </div>
               </div>
             </div>
           </div>
         </nav>
-
-        <button class="md:hidden h-9 w-9">
-          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
       </div>
     </div>
   </header>
 
-  <!-- Main -->
   <main class="flex-1">
-    <!-- Hero Section -->
     <section class="bg-white dark:bg-gray-950 pt-12 pb-20">
       <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-6 text-center lg:text-left">
-              <h1 id="hero-title" class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-100 leading-tight whitespace-nowrap">👋 欢迎来到涂色星球！</h1>
-              <div id="hero-desc1" class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">探索《涂色星球》的丰富涂色世界！这里收录了海量免费、可打印的涂色页面，题材从可爱的卡哇伊美食到精美的风景和趣味图案，应有尽有，激发孩子和成人的无限创意。</div>
-              <div id="hero-desc2" class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">每一张涂色图都是《涂色星球》独家原创，均提供高分辨率 PDF，方便您打印或下载。下载后，您可以用彩色铅笔、水彩、马克笔等真实画材手工上色，也可以选择数码涂色，将图纸导入 Procreate，在 iPad 上轻松创作。</div>
-              <div id="hero-desc3" class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">快来《涂色星球》，享受涂色的乐趣，创造属于您自己的缤纷杰作！</div>
+              <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-100 leading-tight">
+                <span data-i18n="hero-title">👋 欢迎来到涂色星球！</span>
+              </h1>
+              <div class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                <span data-i18n="hero-desc1">探索《涂色星球》的丰富涂色世界！这里收录了海量免费、可打印的涂色页面，题材从可爱的卡哇伊美食到精美的风景和趣味图案，应有尽有，激发孩子和成人的无限创意。</span>
+              </div>
+              <div class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                <span data-i18n="hero-desc2">每一张涂色图都是《涂色星球》独家原创，均提供高分辨率 PDF，方便您打印或下载。下载后，您可以用彩色铅笔、水彩、马克笔等真实画材手工上色，也可以选择数码涂色，将图纸导入 Procreate，在 iPad 上轻松创作。</span>
+              </div>
+              <div class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                <span data-i18n="hero-desc3">快来《涂色星球》，享受涂色的乐趣，创造属于您自己的缤纷杰作！</span>
+              </div>
             </div>
-            <div class="relative mx-auto">
+            <div class="relative max-w-md mx-auto">
               <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img alt="孩子们快乐地制作涂色页面" width="300" height="300" class="w-full h-auto object-cover" src="images/hero/ai-coloring-hero.png">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                <img alt="孩子们快乐地制作涂色页面" width="300" height="300" class="w-full h-auto object-cover" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/hero/ai-coloring-hero.png"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
               </div>
               <div class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full opacity-20 blur-xl"></div>
               <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-15 blur-2xl"></div>
@@ -267,244 +168,865 @@ body{margin:0;line-height:inherit;background-color:hsl(var(--background));color:
       </div>
     </section>
 
-    <!-- Coloring Pages Section -->
     <section class="py-16 bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900">
       <div class="container mx-auto px-4">
-        <h2 id="section-title" class="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-4">免费可打印涂色页面</h2>
-        <p id="section-desc" class="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">探索我们精心策划的涂色页面集合，发现更多精美创作</p>
+        <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-4">
+          <span data-i18n="section-title">免费可打印涂色页面</span>
+        </h2>
+        <p class="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+          <span data-i18n="section-desc">探索我们精心策划的涂色页面集合，发现更多精美创作</span>
+        </p>
         
-        <div id="coloring-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
-          <!-- Generated by JavaScript -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Aesthetic Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2449589214.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Aesthetic Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Alien Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3661199039.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Alien Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Architecture Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3621435478.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Architecture Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Ballerina Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1220896302.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Ballerina Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Beach Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/596536247.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Beach Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Boba Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3004900862.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Boba Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Bunny Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/930033431.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Bunny Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Capybara Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1094903095.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Capybara Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Cat Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1286000515.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Cat Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Christmas Tree Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3407757796.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Christmas Tree Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Construction Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/4109091522.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Construction Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Cow Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2237175773.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Cow Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Dinosaur Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2216799269.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Dinosaur Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Dinosaur: Brachiosaurus Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1931439364.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Dinosaur: Brachiosaurus Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Dinosaur: Stegosaurus Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1224725554.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Dinosaur: Stegosaurus Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Dinosaur: T-Rex Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2814148537.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Dinosaur: T-Rex Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Dinosaur: Triceratops Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1404643698.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Dinosaur: Triceratops Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Dinosaur: Velociraptor Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3422297540.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Dinosaur: Velociraptor Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Dog Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2720882725.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Dog Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Realistic Dog Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/4188607691.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Realistic Dog Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Dragon Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2481990420.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Dragon Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Earth Day Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/3996295941.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Earth Day Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Easter Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1066963183.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Easter Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Easter Bunny Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1588406660.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Easter Bunny Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Easter Egg Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1370122994.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Easter Egg Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Fairy Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2800571658.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Fairy Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Father's Day Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1831182055.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Father's Day Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Fire Truck Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/2771972323.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Fire Truck Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Flower Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1211563995.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Flower Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative group block p-2 h-full w-full cursor-pointer">
+            <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <div class="space-y-4">
+                <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <img alt="Fourth of July Coloring Pages" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300 w-full h-full" src="https://raw.githubusercontent.com/leonxcom/coloring-pages/main/public/images/coloring-pages/1679282424.webp"/>
+                </div>
+                <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">Fourth of July Coloring Pages</h4>
+              </div>
+            </div>
+          </div>
         </div>
-
+        
         <div class="text-center">
-          <button id="view-more-btn" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl duration-300">查看更多涂色页面</button>
+          <button class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl duration-300">
+            <span data-i18n="view-more-btn">查看更多涂色页面</span>
+          </button>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="bg-secondary text-white">
     <div class="container mx-auto px-4 py-12">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="space-y-4">
           <nav class="space-y-2">
-            <a id="tools-tricks-link" class="block text-white/80 hover:text-white transition-colors" href="./tools-tricks/">工具与技巧</a>
-            <a id="about-link" class="block text-white/80 hover:text-white transition-colors" href="./about/">关于我们</a>
-            <a id="contact-link" class="block text-white/80 hover:text-white transition-colors" href="./contact/">联系我们</a>
+            <a class="block text-white/80 hover:text-white transition-colors" href="#" onclick="return false;">
+              <span data-i18n="tools-tricks-link">工具与技巧</span>
+            </a>
+            <a class="block text-white/80 hover:text-white transition-colors" href="#" onclick="return false;">
+              <span data-i18n="about-link">关于我们</span>
+            </a>
+            <a class="block text-white/80 hover:text-white transition-colors" href="#" onclick="return false;">
+              <span data-i18n="contact-link">联系我们</span>
+            </a>
           </nav>
         </div>
         <div class="flex justify-center items-center space-x-4">
-          <a class="text-white/80 hover:text-white transition-colors" href="#">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+          <a class="text-white/80 hover:text-white transition-colors" aria-label="Instagram" href="#" onclick="return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
             </svg>
           </a>
-          <a class="text-white/80 hover:text-white transition-colors" href="#">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+          <a class="text-white/80 hover:text-white transition-colors" aria-label="Facebook" href="#" onclick="return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
             </svg>
           </a>
-          <a class="text-white/80 hover:text-white transition-colors" href="#">
+          <a class="text-white/80 hover:text-white transition-colors" aria-label="Pinterest" href="#" onclick="return false;">
             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"></path>
             </svg>
           </a>
-          <a class="text-white/80 hover:text-white transition-colors" href="#">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+          <a class="text-white/80 hover:text-white transition-colors" aria-label="Twitter" href="#" onclick="return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
             </svg>
           </a>
         </div>
         <div class="text-center md:text-right space-y-2">
-          <p id="copyright" class="text-sm text-white/80">版权所有 © 2025 涂色星球</p>
+          <p class="text-sm text-white/80">
+            <span data-i18n="copyright">版权所有 © 2025 涂色星球</span>
+          </p>
           <div class="text-sm text-white/60 space-x-2">
-            <a id="privacy-link" class="hover:text-white/80 transition-colors" href="./privacy-policy/">隐私政策</a>
+            <a class="hover:text-white/80 transition-colors" href="#" onclick="return false;">
+              <span data-i18n="privacy-link">隐私政策</span>
+            </a>
             <span>|</span>
-            <a id="affiliate-link" class="hover:text-white/80 transition-colors" href="./affiliate-disclaimer/">附属免责声明</a>
+            <a class="hover:text-white/80 transition-colors" href="#" onclick="return false;">
+              <span data-i18n="affiliate-link">附属免责声明</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <script>
-// Multi-language translations
-const translations = {
-  'zh-CN': {
-    'site-logo': '涂色星球',
-    'fullstack-link': '全栈发布版本（Bug少）',
-    'ai-generator-link': 'AI生成涂色页',
-    'current-lang': '简体中文',
-    'hero-title': '👋 欢迎来到涂色星球！',
-    'hero-desc1': '探索《涂色星球》的丰富涂色世界！这里收录了海量免费、可打印的涂色页面，题材从可爱的卡哇伊美食到精美的风景和趣味图案，应有尽有，激发孩子和成人的无限创意。',
-    'hero-desc2': '每一张涂色图都是《涂色星球》独家原创，均提供高分辨率 PDF，方便您打印或下载。下载后，您可以用彩色铅笔、水彩、马克笔等真实画材手工上色，也可以选择数码涂色，将图纸导入 Procreate，在 iPad 上轻松创作。',
-    'hero-desc3': '快来《涂色星球》，享受涂色的乐趣，创造属于您自己的缤纷杰作！',
-    'section-title': '免费可打印涂色页面',
-    'section-desc': '探索我们精心策划的涂色页面集合，发现更多精美创作',
-    'view-more-btn': '查看更多涂色页面',
-    'tools-tricks-link': '工具与技巧',
-    'about-link': '关于我们',
-    'contact-link': '联系我们',
-    'copyright': '版权所有 © 2025 涂色星球',
-    'privacy-link': '隐私政策',
-    'affiliate-link': '附属免责声明'
-  },
-  'en': {
-    'site-logo': 'Coloring Planet',
-    'fullstack-link': 'Full-Stack Version (Fewer Bugs)',
-    'ai-generator-link': 'AI Coloring Generator',
-    'current-lang': 'English',
-    'hero-title': 'Coloring Pages',
-    'hero-desc1': 'Explore a variety of free, printable coloring pages for kids and adults. From cute kawaii food to Parisian architecture, our collection of coloring pages is sure to spark your creativity.',
-    'hero-desc2': 'Each coloring page features artwork you\'ll only find on Coloring Planet. Our coloring sheets are high resolution PDFs, ready for you to print or download.',
-    'hero-desc3': 'Or, color digitally! Easily import your coloring pages into Procreate and color on your iPad. Get ready to have fun and create your own colorful masterpieces with Coloring Planet.',
-    'section-title': 'Free Printable Coloring Pages',
-    'section-desc': 'Explore our carefully curated collection of coloring pages, from simple patterns to complex artistic creations',
-    'view-more-btn': 'View More Coloring Pages',
-    'tools-tricks-link': 'Tools & Tricks',
-    'about-link': 'About Us',
-    'contact-link': 'Contact',
-    'copyright': 'Copyright © 2025 Coloring Planet',
-    'privacy-link': 'Privacy Policy',
-    'affiliate-link': 'Affiliate Disclaimer'
-  },
-  'zh-TW': {
-    'site-logo': '塗色星球',
-    'fullstack-link': '全棧發布版本（Bug少）',
-    'ai-generator-link': 'AI生成塗色頁',
-    'current-lang': '繁體中文',
-    'hero-title': '塗色頁面',
-    'hero-desc1': '探索各種免費、可列印的兒童和成人塗色頁面。從可愛的卡哇伊食物到巴黎建築，我們的塗色頁面收藏一定會激發您的創造力。',
-    'hero-desc2': '每個塗色頁面都有您只能在塗色星球找到的藝術作品。我們的塗色紙是高解析度的 PDF，可供您列印或下載。',
-    'hero-desc3': '或者，數位著色！輕鬆將您的塗色頁面導入 Procreate 並在 iPad 上著色。準備好享受樂趣並使用塗色星球創建您自己的彩色傑作。',
-    'section-title': '免費可列印塗色頁面',
-    'section-desc': '探索我們精心策劃的塗色頁面集合，發現更多精美創作',
-    'view-more-btn': '查看更多塗色頁面',
-    'tools-tricks-link': '工具與技巧',
-    'about-link': '關於我們',
-    'contact-link': '聯絡我們',
-    'copyright': '版權所有 © 2025 塗色星球',
-    'privacy-link': '隱私政策',
-    'affiliate-link': '附屬免責聲明'
-  }
-};
-
-// Coloring pages data
-const coloringPages = [
-  {title: 'Aesthetic Coloring Pages', image: 'https://ext.same-assets.com/2742100107/2449589214.webp'},
-  {title: 'Alien Coloring Pages', image: 'https://ext.same-assets.com/2742100107/3661199039.webp'},
-  {title: 'Architecture Coloring Pages', image: 'https://ext.same-assets.com/2742100107/3621435478.webp'},
-  {title: 'Ballerina Coloring Pages', image: 'https://ext.same-assets.com/2742100107/1220896302.webp'},
-  {title: 'Beach Coloring Pages', image: 'https://ext.same-assets.com/2742100107/596536247.webp'},
-  {title: 'Boba Coloring Pages', image: 'https://ext.same-assets.com/2742100107/3004900862.webp'},
-  {title: 'Bunny Coloring Pages', image: 'https://ext.same-assets.com/2742100107/930033431.webp'},
-  {title: 'Butterfly Coloring Pages', image: 'https://ext.same-assets.com/2742100107/1012341531.webp'},
-  {title: 'Capybara Coloring Pages', image: 'https://ext.same-assets.com/2742100107/1094903095.webp'},
-  {title: 'Cat Coloring Pages', image: 'https://ext.same-assets.com/2742100107/1286000515.webp'},
-  {title: 'Christmas Tree Coloring Pages', image: 'https://ext.same-assets.com/2742100107/3407757796.webp'},
-  {title: 'Construction Coloring Pages', image: 'https://ext.same-assets.com/2742100107/4109091522.webp'},
-  {title: 'Cow Coloring Pages', image: 'https://ext.same-assets.com/2742100107/2237175773.webp'},
-  {title: 'Dinosaur Coloring Pages', image: 'https://ext.same-assets.com/2742100107/2216799269.webp'},
-  {title: 'Dog Coloring Pages', image: 'https://ext.same-assets.com/2742100107/2720882725.webp'},
-  {title: 'Dragon Coloring Pages', image: 'https://ext.same-assets.com/2742100107/2481990420.webp'},
-  {title: 'Earth Day Coloring Pages', image: 'https://ext.same-assets.com/2742100107/3996295941.webp'},
-  {title: 'Easter Coloring Pages', image: 'https://ext.same-assets.com/2742100107/1066963183.webp'},
-  {title: 'Fairy Coloring Pages', image: 'https://ext.same-assets.com/2742100107/2800571658.webp'},
-  {title: 'Flower Coloring Pages', image: 'https://ext.same-assets.com/2742100107/1211563995.webp'}
-];
-
-// Current language
-let currentLang = localStorage.getItem('language') || 'zh-CN';
-
-// Language switching function
-function switchLanguage(lang) {
-  currentLang = lang;
-  localStorage.setItem('language', lang);
-  
-  document.documentElement.lang = lang;
-  document.title = translations[lang]['site-logo'] + ' - 最好玩的涂色平台';
-  
-  // Update all text elements
-  Object.keys(translations[lang]).forEach(key => {
-    const element = document.getElementById(key);
-    if (element) {
-      element.textContent = translations[lang][key];
-    }
-  });
-}
-
-// Theme toggle functionality
-function initTheme() {
-  const toggle = document.getElementById('theme-toggle');
-  const slider = document.getElementById('theme-slider');
-  
-  function updateSlider(isDark) {
-    slider.style.transform = isDark ? 'translateX(2rem)' : 'translateX(0.25rem)';
-  }
-  
-  // Set initial state
-  updateSlider(document.documentElement.classList.contains('dark'));
-  
-  toggle.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.contains('dark');
-    const html = document.documentElement;
+  <!-- Dialog Portal -->
+  <div id="dialog-portal" class="hidden">
+    <!-- Dialog Overlay -->
+    <div id="dialog-overlay" class="fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0"></div>
     
-    if (isDark) {
-      html.classList.remove('dark');
-      html.classList.add('light');
-      localStorage.setItem('theme', 'light');
-      updateSlider(false);
-    } else {
-      html.classList.remove('light');
-      html.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-      updateSlider(true);
-    }
-  });
-}
-
-// Generate coloring pages grid
-function generateColoringGrid() {
-  const grid = document.getElementById('coloring-grid');
-  
-  const html = coloringPages.map(page => `
-    <div class="relative group block p-2 h-full w-full cursor-pointer">
-      <div class="rounded-2xl h-full w-full p-4 overflow-hidden bg-white dark:bg-gray-900 border border-transparent group-hover:border-purple-300 relative z-20 shadow-lg group-hover:shadow-xl transition-all duration-300">
-        <div class="relative z-50">
-          <div class="space-y-4">
-            <div class="aspect-square relative overflow-hidden bg-gray-50 dark:bg-gray-800 rounded-xl">
-              <img alt="${page.title}" loading="lazy" class="object-contain group-hover:scale-105 transition-transform duration-300" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0" src="${page.image}">
-            </div>
-            <h4 class="text-center text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-purple-600 transition-colors tracking-wide">${page.title}</h4>
-          </div>
-        </div>
+    <!-- Dialog Content -->
+    <div id="dialog-content" class="fixed left-[50%] top-[50%] z-50 w-full max-w-4xl translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg h-[90vh] flex flex-col bg-white dark:bg-gray-900">
+      
+      <!-- Dialog Header -->
+      <div id="dialog-header" class="flex flex-col space-y-1.5 text-center sm:text-left flex-shrink-0">
+        <h2 id="dialog-title" class="text-xl font-bold text-center text-gray-800 dark:text-gray-100"></h2>
       </div>
+      
+      <!-- 图片容器 -->
+      <div class="flex-1 relative overflow-hidden rounded-lg bg-gray-50 dark:bg-gray-800 min-h-0">
+        <img id="modal-image" src="" alt="" class="object-contain w-full h-full"/>
+      </div>
+      
+      <!-- 按钮组 -->
+      <div class="flex-shrink-0 flex justify-center gap-4 pt-4">
+        <button id="download-btn" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-blue-600 hover:bg-blue-700 text-white shadow-sm px-6 py-2">
+          <!-- Download Icon (Lucide) -->
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7,10 12,15 17,10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span data-i18n="download-btn">下载 PDF</span>
+        </button>
+        
+        <button id="print-btn" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-green-600 hover:bg-green-700 text-white shadow-sm px-6 py-2">
+          <!-- Printer Icon (Lucide) -->
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6,9 6,2 18,2 18,9"></polyline>
+            <path d="M6,18H4a2,2,0,0,1-2-2V11a2,2,0,0,1,2-2H20a2,2,0,0,1,2,2v5a2,2,0,0,1-2,2H18"></path>
+            <polyline points="6,14 6,22 18,22 18,14"></polyline>
+          </svg>
+          <span data-i18n="print-btn">打印</span>
+        </button>
+      </div>
+      
+      <!-- Dialog Close Button -->
+      <button id="dialog-close" class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none">
+        <!-- X Icon (Lucide) -->
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+        <span class="sr-only">Close</span>
+      </button>
     </div>
-  `).join('');
-  
-  grid.innerHTML = html;
-}
+  </div>
 
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-  // Set initial language
-  switchLanguage(currentLang);
-  
-  // Initialize theme toggle
-  initTheme();
-  
-  // Generate coloring pages
-  generateColoringGrid();
-  
-  // Language selector event listeners
-  document.querySelectorAll('.lang-option').forEach(option => {
-    option.addEventListener('click', (e) => {
-      switchLanguage(e.target.dataset.lang);
+  <script>
+    // 完整的多语言翻译数据 - 所有内容集合在一个HTML页面中
+    const translations = {
+      'zh-CN': {
+        'site-logo': '涂色星球',
+        'fullstack-link': '全栈发布版本（Bug少）',
+        'ai-generator-link': 'AI生成涂色页',
+        'current-lang': '中文（简体）',
+        'hero-title': '👋 欢迎来到涂色星球！',
+        'hero-desc1': '探索《涂色星球》的丰富涂色世界！这里收录了海量免费、可打印的涂色页面，题材从可爱的卡哇伊美食到精美的风景和趣味图案，应有尽有，激发孩子和成人的无限创意。',
+        'hero-desc2': '每一张涂色图都是《涂色星球》独家原创，均提供高分辨率 PDF，方便您打印或下载。下载后，您可以用彩色铅笔、水彩、马克笔等真实画材手工上色，也可以选择数码涂色，将图纸导入 Procreate，在 iPad 上轻松创作。',
+        'hero-desc3': '快来《涂色星球》，享受涂色的乐趣，创造属于您自己的缤纷杰作！',
+        'section-title': '免费可打印涂色页面',
+        'section-desc': '探索我们精心策划的涂色页面集合，发现更多精美创作',
+        'view-more-btn': '查看更多涂色页面',
+        'tools-tricks-link': '工具与技巧',
+        'about-link': '关于我们',
+        'contact-link': '联系我们',
+        'copyright': '版权所有 © 2025 涂色星球',
+        'privacy-link': '隐私政策',
+        'affiliate-link': '附属免责声明',
+        'download-btn': '下载 PDF',
+        'print-btn': '打印'
+      },
+      'en': {
+        'site-logo': 'Coloring Planet',
+        'fullstack-link': 'Full-Stack Version (Fewer Bugs)',
+        'ai-generator-link': 'AI Coloring Generator',
+        'current-lang': 'English',
+        'hero-title': '👋 Welcome to Coloring Planet!',
+        'hero-desc1': 'Explore the rich coloring world of "Coloring Planet"! We have a massive collection of free, printable coloring pages, from cute kawaii food to beautiful landscapes and fun patterns.',
+        'hero-desc2': 'Every coloring page is an original creation by "Coloring Planet", all provided in high-resolution PDF format for easy printing or downloading.',
+        'hero-desc3': 'Come to "Coloring Planet" and enjoy the fun of coloring to create your own colorful masterpieces!',
+        'section-title': 'Free Printable Coloring Pages',
+        'section-desc': 'Explore our carefully curated collection of coloring pages and discover more beautiful creations',
+        'view-more-btn': 'View More Coloring Pages',
+        'tools-tricks-link': 'Tools & Tricks',
+        'about-link': 'About Us',
+        'contact-link': 'Contact Us',
+        'copyright': 'Copyright © 2025 Coloring Planet',
+        'privacy-link': 'Privacy Policy',
+        'affiliate-link': 'Affiliate Disclaimer',
+        'download-btn': 'Download PDF',
+        'print-btn': 'Print'
+      },
+      'zh-TW': {
+        'site-logo': '塗色星球',
+        'fullstack-link': '全棧發布版本（Bug少）',
+        'ai-generator-link': 'AI生成塗色頁',
+        'current-lang': '中文（繁體）',
+        'hero-title': '👋 歡迎來到塗色星球！',
+        'hero-desc1': '探索《塗色星球》的豐富塗色世界！這裡收錄了海量免費、可列印的塗色頁面，題材從可愛的卡哇伊美食到精美的風景和趣味圖案，應有盡有，激發孩子和成人的無限創意。',
+        'hero-desc2': '每一張塗色圖都是《塗色星球》獨家原創，均提供高解析度 PDF，方便您列印或下載。下載後，您可以用彩色鉛筆、水彩、馬克筆等真實畫材手工上色，也可以選擇數位塗色，將圖紙匯入 Procreate，在 iPad 上輕鬆創作。',
+        'hero-desc3': '快來《塗色星球》，享受塗色的樂趣，創造屬於您自己的繽紛傑作！',
+        'section-title': '免費可列印塗色頁面',
+        'section-desc': '探索我們精心策劃的塗色頁面集合，發現更多精美創作',
+        'view-more-btn': '查看更多塗色頁面',
+        'tools-tricks-link': '工具與技巧',
+        'about-link': '關於我們',
+        'contact-link': '聯絡我們',
+        'copyright': '版權所有 © 2025 塗色星球',
+        'privacy-link': '隱私政策',
+        'affiliate-link': '附屬免責聲明',
+        'download-btn': '下載 PDF',
+        'print-btn': '列印'
+      }
+    };
+
+    // 当前语言
+    let currentLang = localStorage.getItem('coloring-planet-lang') || 'zh-CN';
+
+    // 切换语言函数
+    function switchLanguage(lang) {
+      console.log('Switching to language:', lang);
+      currentLang = lang;
+      localStorage.setItem('coloring-planet-lang', lang);
+      document.documentElement.lang = lang;
+      updateContent();
+    }
+
+    // 更新页面内容
+    function updateContent() {
+      const langData = translations[currentLang] || translations['zh-CN'];
+      console.log('Updating content for:', currentLang);
+      
+      // 更新所有带有 data-i18n 属性的元素
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (langData[key]) {
+          element.textContent = langData[key];
+        }
+      });
+    }
+
+    // DOM 加载完成后初始化
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM loaded, initializing...');
+      updateContent();
+      
+      // 添加语言选择器事件监听
+      document.addEventListener('click', function(e) {
+        if (e.target.closest('.lang-option')) {
+          e.preventDefault();
+          e.stopPropagation();
+          const lang = e.target.getAttribute('data-lang');
+          console.log('Language option clicked:', lang);
+          if (lang) {
+            switchLanguage(lang);
+            
+            // 关闭下拉菜单
+            const dropdown = document.querySelector('.lang-dropdown');
+            if (dropdown) {
+              dropdown.style.opacity = '0';
+              dropdown.style.pointerEvents = 'none';
+            }
+          }
+        }
+      });
+      
+      // 添加悬停效果
+      const langSelector = document.querySelector('.lang-selector');
+      const dropdown = document.querySelector('.lang-dropdown');
+      
+      if (langSelector && dropdown) {
+        langSelector.addEventListener('mouseenter', function() {
+          dropdown.style.opacity = '1';
+          dropdown.style.pointerEvents = 'auto';
+        });
+        
+        langSelector.addEventListener('mouseleave', function() {
+          dropdown.style.opacity = '0';
+          dropdown.style.pointerEvents = 'none';
+        });
+      }
+
+      // 主题切换功能
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeToggleSwitch = document.getElementById('theme-toggle-switch');
+      const sunIcon = document.getElementById('sun-icon');
+      const moonIcon = document.getElementById('moon-icon');
+      const star1 = document.getElementById('star-1');
+      const star2 = document.getElementById('star-2');
+      const star3 = document.getElementById('star-3');
+      const glowEffect = document.getElementById('glow-effect');
+      
+      // 更新主题UI的函数
+      function updateThemeUI(isDark) {
+        // 按钮背景渐变
+        if (themeToggle) {
+          // 移除所有渐变类
+          themeToggle.classList.remove(
+            'bg-gradient-to-r', 'from-yellow-400', 'via-orange-500', 'to-pink-500',
+            'from-indigo-500', 'via-purple-500'
+          );
+          
+          // 添加对应主题的渐变类
+          if (isDark) {
+            themeToggle.classList.add('bg-gradient-to-r', 'from-indigo-500', 'via-purple-500', 'to-pink-500');
+          } else {
+            themeToggle.classList.add('bg-gradient-to-r', 'from-yellow-400', 'via-orange-500', 'to-pink-500');
+          }
+        }
+        
+        // 光晕效果
+        if (glowEffect) {
+          // 移除所有渐变类
+          glowEffect.classList.remove(
+            'bg-gradient-to-r', 'from-yellow-400', 'via-orange-500', 'to-pink-500',
+            'from-indigo-500', 'via-purple-500'
+          );
+          
+          // 添加对应主题的渐变类
+          if (isDark) {
+            glowEffect.classList.add('bg-gradient-to-r', 'from-indigo-500', 'via-purple-500', 'to-pink-500');
+          } else {
+            glowEffect.classList.add('bg-gradient-to-r', 'from-yellow-400', 'via-orange-500', 'to-pink-500');
+          }
+        }
+        
+        // 滑动按钮位置
+        if (themeToggleSwitch) {
+          if (isDark) {
+            themeToggleSwitch.classList.remove('translate-x-1');
+            themeToggleSwitch.classList.add('translate-x-8');
+          } else {
+            themeToggleSwitch.classList.remove('translate-x-8');
+            themeToggleSwitch.classList.add('translate-x-1');
+          }
+        }
+        
+        // 太阳图标
+        if (sunIcon) {
+          if (isDark) {
+            sunIcon.classList.remove('scale-100', 'opacity-100', 'rotate-0');
+            sunIcon.classList.add('scale-0', 'opacity-0', 'rotate-90');
+          } else {
+            sunIcon.classList.remove('scale-0', 'opacity-0', 'rotate-90');
+            sunIcon.classList.add('scale-100', 'opacity-100', 'rotate-0');
+          }
+        }
+        
+        // 月亮图标
+        if (moonIcon) {
+          if (isDark) {
+            moonIcon.classList.remove('scale-0', 'opacity-0', '-rotate-90');
+            moonIcon.classList.add('scale-100', 'opacity-100', 'rotate-0');
+          } else {
+            moonIcon.classList.remove('scale-100', 'opacity-100', 'rotate-0');
+            moonIcon.classList.add('scale-0', 'opacity-0', '-rotate-90');
+          }
+        }
+        
+        // 星星装饰效果 - 与原版行为一致：亮模式隐藏，暗模式显示
+        const stars = [star1, star2, star3];
+        stars.forEach(star => {
+          if (star) {
+            if (isDark) {
+              star.style.display = 'block';
+              star.classList.add('animate-pulse');
+            } else {
+              star.style.display = 'none';
+              star.classList.remove('animate-pulse');
+            }
+          }
+        });
+      }
+      
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+          const isDark = document.documentElement.classList.contains('dark');
+          
+          if (isDark) {
+            // 切换到浅色主题
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            updateThemeUI(false);
+          } else {
+            // 切换到深色主题
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            updateThemeUI(true);
+          }
+        });
+        
+        // 初始化主题状态
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = savedTheme === 'dark' || (savedTheme === null && systemDark);
+        
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        
+        // 更新UI状态
+        updateThemeUI(isDark);
+      }
+
+      // 图片弹窗功能 (使用Dialog组件结构)
+      const dialogPortal = document.getElementById('dialog-portal');
+      const dialogOverlay = document.getElementById('dialog-overlay');
+      const dialogContent = document.getElementById('dialog-content');
+      const modalImage = document.getElementById('modal-image');
+      const dialogTitle = document.getElementById('dialog-title');
+      const dialogClose = document.getElementById('dialog-close');
+      const downloadBtn = document.getElementById('download-btn');
+      const printBtn = document.getElementById('print-btn');
+      
+      // 下载功能
+      function handleDownload() {
+        const img = modalImage;
+        if (img && img.src) {
+          const link = document.createElement('a');
+          link.href = img.src;
+          link.download = `${dialogTitle.textContent.replace(/\s+/g, '-').toLowerCase()}.png`;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+      }
+      
+      // 打印功能
+      function handlePrint() {
+        const img = modalImage;
+        const title = dialogTitle.textContent;
+        if (img && img.src) {
+          const printWindow = window.open('', '_blank');
+          if (printWindow) {
+            printWindow.document.write(`
+              <!DOCTYPE html>
+              <html>
+                <head>
+                  <title>打印 - ${title}</title>
+                  <style>
+                    body {
+                      margin: 0;
+                      padding: 20px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      min-height: 100vh;
+                      background: white;
+                    }
+                    img {
+                      max-width: 100%;
+                      max-height: 100vh;
+                      object-fit: contain;
+                    }
+                    @media print {
+                      body { margin: 0; padding: 0; }
+                      img { max-height: 100vh; width: auto; }
+                    }
+                  </style>
+                </head>
+                <body>
+                  <img src="${img.src}" alt="${title}" onload="window.print(); window.close();" />
+                </body>
+              </html>
+            `);
+            printWindow.document.close();
+          }
+        }
+      }
+      
+      // 为下载和打印按钮添加事件监听
+      if (downloadBtn) {
+        downloadBtn.addEventListener('click', handleDownload);
+      }
+      
+      if (printBtn) {
+        printBtn.addEventListener('click', handlePrint);
+      }
+      
+      // Dialog打开函数
+      function openDialog(imageSrc, imageAlt, title) {
+        if (dialogPortal && modalImage && dialogTitle) {
+          modalImage.src = imageSrc;
+          modalImage.alt = imageAlt;
+          dialogTitle.textContent = title;
+          dialogPortal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden'; // 防止背景滚动
+          
+          // 添加动画状态
+          if (dialogOverlay) dialogOverlay.setAttribute('data-state', 'open');
+          if (dialogContent) dialogContent.setAttribute('data-state', 'open');
+        }
+      }
+      
+      // Dialog关闭函数
+      function closeDialog() {
+        if (dialogPortal) {
+          // 添加关闭动画状态
+          if (dialogOverlay) dialogOverlay.setAttribute('data-state', 'closed');
+          if (dialogContent) dialogContent.setAttribute('data-state', 'closed');
+          
+          // 延迟隐藏以显示动画
+          setTimeout(() => {
+            dialogPortal.classList.add('hidden');
+            document.body.style.overflow = '';
+            // 重置状态
+            if (dialogOverlay) dialogOverlay.removeAttribute('data-state');
+            if (dialogContent) dialogContent.removeAttribute('data-state');
+          }, 200);
+        }
+      }
+      
+      // 为所有图片添加点击事件
+      document.querySelectorAll('.relative.group.block').forEach(card => {
+        card.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const img = this.querySelector('img');
+          const title = this.querySelector('h4');
+          
+          if (img && title) {
+            openDialog(img.src, img.alt, title.textContent);
+          }
+        });
+      });
+      
+      // 关闭弹窗功能
+      if (dialogClose) {
+        dialogClose.addEventListener('click', closeDialog);
+      }
+      
+      // 点击背景关闭弹窗
+      if (dialogOverlay) {
+        dialogOverlay.addEventListener('click', closeDialog);
+      }
+      
+      // ESC键关闭弹窗
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && dialogPortal && !dialogPortal.classList.contains('hidden')) {
+          closeDialog();
+        }
+      });
     });
-  });
-});
   </script>
 </body>
-</html>
+</html> 
